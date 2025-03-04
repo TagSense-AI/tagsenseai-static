@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TagSense AI - Revolutionizing Cloud Infrastructure</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Font Options */
+        .font-option-1 { font-family: 'Montserrat', sans-serif; }
+
+        :root {
+            --primary-dark: #0A5775;
+            --primary-medium: #1A7AAD;
+            --primary-light: #4CB0FF;
+            --accent-green: #2DC770;
+            --bg-light: #F5F9FF;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--bg-light);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo svg {
+            width: 60px;
+            height: 60px;
+            transition: transform 0.3s ease;
+        }
+        
+        .logo:hover svg {
+            transform: scale(1.05);
+        }
+        
+        .logo-text {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            letter-spacing: -0.5px;
+        }
+        
+        .hero {
+            display: flex;
+            min-height: 80vh;
+            align-items: center;
+            padding: 50px 0;
+        }
+        
+        .hero-content {
+            flex: 1;
+            padding-right: 50px;
+        }
+        
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        h1 {
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+            color: var(--primary-dark);
+            line-height: 1.2;
+            font-weight: 800;
+        }
+        
+        .subtitle {
+            font-size: 1.5rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        
+        .stat {
+            display: inline-block;
+            margin-right: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            color: #666;
+        }
+        
+        .cta {
+            margin-top: 40px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: var(--primary-dark);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+            margin-right: 20px;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(10, 87, 117, 0.15);
+            background: var(--primary-medium);
+        }
+        
+        .btn:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 12px rgba(10, 87, 117, 0.1);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary-dark);
+            color: var(--primary-dark);
+        }
+        
+        .btn-outline:hover {
+            background: rgba(10, 87, 117, 0.05);
+            border-color: var(--primary-medium);
+            color: var(--primary-medium);
+        }
+        
+        .contact-card {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 50px;
+            background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 1));
+            border-radius: 12px;
+            box-shadow: 0 15px 40px rgba(10, 87, 117, 0.08);
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(10, 87, 117, 0.05);
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            text-align: left;
+        }
+        
+        .contact-icon {
+            font-size: 2.5rem;
+            color: var(--primary-medium);
+            min-width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .contact-text {
+            flex: 1;
+        }
+        
+        .contact-text h3 {
+            margin-bottom: 10px;
+            color: var(--primary-dark);
+        }
+        
+        .contact-text a {
+            color: var(--primary-dark);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+        
+        .contact-text a:hover {
+            color: var(--primary-medium);
+        }
+        
+        .contact-text a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--primary-medium);
+            transition: width 0.3s ease;
+        }
+        
+        .contact-text a:hover::after {
+            width: 100%;
+        }
+        
+        .contact-divider {
+            height: 1px;
+            background-color: #eee;
+            margin: 10px 0;
+        }
+        
+        footer {
+            background-color: var(--primary-dark);
+            color: white;
+            padding: 40px 0;
+            margin-top: 100px;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .footer-links h3 {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .footer-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: white;
+            transition: width 0.3s ease;
+        }
+        
+        .footer-links a:hover::after {
+            width: 100%;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 900px) {
+            .hero {
+                flex-direction: column;
+            }
+            
+            .hero-content, .hero-image {
+                padding: 20px 0;
+                width: 100%;
+            }
+            
+            h1 {
+                font-size: 2.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="logo-small.png" />
+                <div class="logo-text font-option-1">TagSense AI</div>
+            </div>
+            <nav>
+                <a href="#" onclick="window.location.href='mailto:' + 'info' + '@' + 'tagsense.ai'; return false;" class="btn btn-outline">Contact Us</a>
+            </nav>
+        </header>
+        
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Revolutionizing Cloud Infrastructure</h1>
+                <p class="subtitle">Harness the power of AI to transform how your business manages cloud resources.</p>
+                
+                <div class="stats">
+                    <div class="stat">
+                        <div class="stat-number">78%</div>
+                        <div class="stat-label">of companies face challenges</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">$150K</div>
+                        <div class="stat-label">average savings</div>
+                    </div>
+                </div>
+                
+                <p>Our proprietary AI technology helps organizations gain control over their cloud infrastructure with zero configuration required. Multi-cloud compatible and enterprise-ready.</p>
+                
+                <div class="cta">
+                    <a href="#" onclick="window.location.href='mailto:' + 'info' + '@' + 'tagsense.ai'; return false;" class="btn">Contact Us</a>
+                    <a href="#contact" class="btn btn-outline">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="hero-image"><img src="logo.png" /></div>
+        </section>
+        
+        <section id="contact" class="contact-section" style="margin-top: 100px; margin-bottom: 100px;">
+            <div class="contact-card">
+                <h2 style="text-align: center; margin-bottom: 30px; color: var(--primary-dark);">Get in Touch</h2>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-text">
+                            <h3>Email Us</h3>
+                            <p><a href="#" class="obfuscated-email">info@tagsense.ai</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-divider"></div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">💼</div>
+                        <div class="contact-text">
+                            <h3>For Business Inquiries</h3>
+                            <p>Interested in our technology? Have questions?</p>
+                            <p>We're happy to discuss how TagSense AI can help your organization.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <h3>TagSense AI</h3>
+                    <p>Revolutionizing cloud resource management with advanced AI technology.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li>Email: <a href="#" class="obfuscated-email">info@tagsense.ai</a></li>
+                        <li>Follow us: <a href="https://www.linkedin.com/company/tagsense-ai" target="_blank">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; <span id="currentYear">2025</span> TagSense AI. All rights reserved.
+            </div>
+            
+            <script>
+                // Dynamic copyright year
+                document.getElementById('currentYear').textContent = new Date().getFullYear();
+                
+                // Email obfuscation
+                document.addEventListener('DOMContentLoaded', function() {
+                    const emailElements = document.querySelectorAll('.obfuscated-email');
+                    emailElements.forEach(function(element) {
+                        const username = 'info';
+                        const domain = 'tagsense.ai';
+                        const email = username + '@' + domain;
+                        
+                        if (element.tagName === 'A') {
+                            element.href = 'mailto:' + email;
+                            element.textContent = email;
+                        } else {
+                            element.textContent = email;
+                        }
+                    });
+                });
+            </script>
+        </div>
+    </footer>
+</body>
+</html>
