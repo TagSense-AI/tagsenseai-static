@@ -309,6 +309,114 @@
             h1 {
                 font-size: 2.8rem;
             }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .logo-text {
+                font-size: 1.8rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 2.4rem;
+            }
+            
+            .subtitle {
+                font-size: 1.3rem;
+            }
+            
+            .stat-number {
+                font-size: 2.2rem;
+            }
+            
+            .contact-card {
+                padding: 30px 20px;
+            }
+            
+            .contact-icon {
+                min-width: 50px;
+                height: 50px;
+                font-size: 2rem;
+            }
+            
+            .btn {
+                padding: 12px 24px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+                align-items: flex-start;
+            }
+            
+            .logo {
+                align-self: flex-start;
+            }
+            
+            nav {
+                align-self: flex-start;
+            }
+            
+            h1 {
+                font-size: 2rem;
+                word-wrap: break-word;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .stats {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .stat {
+                margin-right: 0;
+            }
+            
+            .cta {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .btn {
+                margin-right: 0;
+                width: 100%;
+                text-align: center;
+            }
+            
+            .contact-item {
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: center;
+            }
+            
+            .contact-icon {
+                margin: 0 auto 10px;
+            }
+            
+            .contact-text {
+                text-align: center;
+                width: 100%;
+            }
+            
+            .hero-image img {
+                max-width: 100%;
+                height: auto;
+            }
         }
     </style>
 </head>
